@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Teller</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='100'>🌦️</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🌦️ Weather Teller</h1>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="search"
+          placeholder="Enter city name..."
+          autocomplete="off"
+        />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <div id="loader" class="loader">Loading...</div>
+
+      <div id="weather-info" class="hidden">
+        <h2><span id="city-name"></span>, <span id="country"></span></h2>
+        <p id="date"></p>
+        <p id="time"></p>
+
+        <div class="weather-box">
+          <img id="weather-icon" src="" alt="Weather Icon" />
+          <div>
+            <p id="description"></p>
+            <h1 id="temp"></h1>
+          </div>
+        </div>
+      </div>
+
+      <div id="forecast" class="hidden">
+        <h3>Today's Details</h3>
+        <ul id="forecast-list"></ul>
+      </div>
+    </div>
+
+    <script src="apikeys.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
